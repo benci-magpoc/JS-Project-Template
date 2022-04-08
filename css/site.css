@@ -46,7 +46,7 @@ main>.container {
 }
 
 .techIcons {
-    font-size: 5rem;
+    font-size: 3rem;
     /* color: var(--bm-light-color); */
     padding-right: 1rem;
 }
@@ -79,4 +79,12 @@ footer img:hover {
 .checklist i {
     color: var(--cf-orange);
 
+}
+
+@media (min-width: 575.98px) {
+    .techIcons {
+        font-size: 5rem;
+        /* color: var(--bm-light-color); */
+        padding-right: 1rem;
+    }
 }

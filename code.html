@@ -31,6 +31,8 @@
     <link href="./CSS/hoverCard.css" rel="stylesheet">
     <!-- Blog card CSS -->
     <link href="./CSS/blogCard.css" rel="stylesheet">
+    <!-- Prism CSS -->
+    <link href="./css/prism.css" rel="stylesheet">
 
 </head>
 
@@ -70,7 +72,47 @@
 
     <main class="flex-shrink-0 py-3">
         <div class="container mt-5">
-            <h1>CODE PAGE</h1>
+            <h1>THE CODE FOR:</h1>
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <pre class="line-numbers">
+                        <code class="language-javascript">
+                            
+                            function getMessage() {
+                                let message = document.getElementById("txtMessage").value;
+                                myFunction(message);
+                            }
+                            
+                            
+                            function myFunction(message) {
+                            
+                                // getting ol element from the page
+                                element = document.getElementById("results");
+                            
+                                // create a new li element
+                                let item = document.createElement("li");
+                                //add class to the element
+                                item.classList.add("list-group-item");
+                                item.classList.add("messageClass");
+                            
+                                //set the message for the li element
+                                item.innerHTML = message;
+                                // add new item to list
+                                element.appendChild(item);
+                                                        
+                            }
+                        </code>
+                    </pre>
+
+                </div>
+                <div class="col-12 col-lg-4">
+                    <p>The code is structured in two functions</p>
+                    <h5>getMessage</h5>
+                    <p>Gets values from the user.</p>
+                    <h5>displayMessage</h5>
+                    <p>Displays the items on the page.</p>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -108,6 +150,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
+    <!-- Prism JS -->
+    <script src="./js/prism.js"></script>
+    <script>
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': true
+        })
+    </script>
+
 </body>
 
 </html>

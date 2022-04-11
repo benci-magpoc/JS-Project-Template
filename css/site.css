@@ -81,6 +81,11 @@ footer img:hover {
 
 }
 
+.messageClass {
+    color: var(--cf-orange);
+    font-size: 1rem;
+}
+
 @media (min-width: 575.98px) {
     .techIcons {
         font-size: 5rem;
